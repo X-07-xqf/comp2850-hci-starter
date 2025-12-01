@@ -13,3 +13,4 @@ Your consent protocol should include:
 - [ ] Contact information
 
 See mdbook Week 6 Lab 2 Activity 1 Step 2 for the full template to copy.
+ test
