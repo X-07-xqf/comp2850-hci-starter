@@ -92,6 +92,18 @@ object TaskRepository {
     // - fun find(id: Int): Task?
     // - fun update(task: Task)
 
+    // Look up task by ID
+    fun get(id: Int): Task? = tasks.find { it.id == id }
+
+    // Update task title
+    fun update(id: Int, newTitle: String): Task? {
+        val task = tasks.find { it.id == id } ?: return null
+        task.title = newTitle
+        persist()
+        return task
+}
+
+
     private fun persist() {
         file.writeText("id,title\n" + tasks.joinToString("\n") { "${it.id},${it.title}" })
     }
