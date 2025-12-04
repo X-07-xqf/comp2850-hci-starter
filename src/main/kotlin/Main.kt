@@ -177,6 +177,7 @@ suspend fun ApplicationCall.renderTemplate(
  */
 fun ApplicationCall.isHtmxRequest(): Boolean = request.headers["HX-Request"] == "true"
 
+
 /**
  * Configure session handling (privacy-safe anonymous IDs).
  *

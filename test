@@ -3,29 +3,6 @@
 {% block content %}
 <h1>Tasks</h1>
 
-{# ========== 错误摘要开始 ========== #}
-{% if error %}
-<div role="alert" aria-live="assertive" class="error-summary" id="error-summary" tabindex="-1">
-  <h2>There is a problem</h2>
-  <ul>
-    {% if error == "title" %}
-    <li>
-      <a href="#title">
-        {% if msg == "too_long" %}
-          Title is too long (max {{ MAX_TITLE_LENGTH }} characters)
-        {% elseif msg == "too_short" %}
-          Title must be at least {{ MIN_TITLE_LENGTH }} characters
-        {% else %}
-          Title is required
-        {% endif %}
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-</div>
-{% endif %}
-{# ========== 错误摘要结束 ========== #}
-
 <form action="/tasks" method="get"
       hx-get="/tasks/fragment"
       hx-target="#task-area"
