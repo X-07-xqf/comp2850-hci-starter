@@ -101,7 +101,7 @@ object TaskRepository {
         task.title = newTitle
         persist()
         return task
-}
+    }
 
 
     private fun persist() {

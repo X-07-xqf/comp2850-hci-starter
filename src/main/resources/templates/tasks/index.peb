@@ -1,5 +1,3 @@
-cd /workspaces/comp2850-hci-starter
-
 {% extends "_layout/base.peb" %}
 
 {% block content %}
@@ -48,4 +46,3 @@ cd /workspaces/comp2850-hci-starter
   </ul>
 </section>
 {% endblock %}
-EOF
